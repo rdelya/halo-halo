@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confess Buat Robert</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e3f2fd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      max-width: 500px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background-color: #64b5f6;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #42a5f5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="page">
+    <h2>Hai Robert 👋</h2>
+    <p>Aku mau ngomong sesuatu, tapi kayaknya udah ketebak ya? 😅<br>Tenang aja, ini bukan tagihan atau utang kok!<br>Hanya sekedar curhat yang udah lama aku pendam.</p>
+    <button onclick="nextPage()">Lanjut ➡️</button>
+  </div>
+
+  <script>
+    const pages = [
+      `<h2>Confess... Lagi? </h2>
+      <p>Jadi, kamu udah tahu kan kalau aku <strong>have a crush on you</strong>? 😅<br>Tapi kayaknya aku nggak pernah bener-bener ngomong dengan jelas, kan?<br>Yah, sekarang aku mau bilang lagi, tapi lewat cara yang sedikit lebih unik…<br>Semoga kamu nggak bosen ya dengerin aku confess lagi 🙈</p>`,
+
+      `<h2>Hmmmm</h2>
+      <p>Jujur aja, aku sering mikir...<br>Kenapa sih aku nggak bisa ngomong langsung?<br>Mungkin karena terlalu malu, atau takut kamu bakal merasa aneh.<br>Tapi setelah mikir-mikir, kayaknya lebih gampang kalau aku ngomong lewat sini aja.<br>Jadi ya, ini aku, lagi confess lagi. 😌</p>`,
+
+      `<h2>Thanks</h2>
+      <p>Kadang aku mikir, kenapa ya harus repot-repot confess lewat website kayak gini?<br>Tapi ya, yaudah lah... Ini lebih aman daripada ngomong langsung, kan? 😂<br>Selain itu, aku juga bisa lebih leluasa ngomongin hal-hal yang mungkin nggak sempat aku bilang.<br>Oh, dan makasih ya... karena udah mau menanggapi hal-hal nggak jelas dari aku, padahal kamu punya pilihan buat cuek atau pergi. 😌</p>`,
+
+      `<h2>Serius!!!</h2>
+      <p>Eh tapi tunggu dulu...<br>Kalau kamu udah baca sampai sini, berarti kamu cukup sabar ya 😆<br>Oke, ini pengakuan aku untuk kedua kalinya.<br>Kalau kamu masih inget, dulu aku confess pertama kali pakai nomor anonim.<br>Jujur aja... sampai sekarang aku masih ada rasa sama kamu.<br><br>Dengan aku bilang gini, bukan berarti aku mau bikin kamu jadi terbebani.<br>Di sini aku cuma pure mau utarain apa yang masih aku rasain.<br>Dan aku cuma mau bilang... aku pengen terus bisa berteman baik sama kamu.<br>Jangan ngerasa kasihan atau apapun itu—aku lakuin ini semua karena aku mau.<br>Jadi diri kamu sendiri, ya.</p>`,
+
+      `<h2>Giliran Kamu! ✉️</h2>
+      <p>Sekarang aku pengen tahu...<br>Apa sih yang kamu pikirin setelah baca semua ini?<br>Apa kamu ada pesan? Atau pendapat?<br>Aku nggak maksa sih, tapi kalau kamu bersedia, aku bakal seneng banget bisa baca balasan dari kamu.<br><br>Terus makasih juga... karena udah ramah dan nggak bikin aku ngerasa kayak orang aneh, walaupun aku emang sering overthinking sendiri 😅</p>
+      <a href="https://forms.gle/F4qSKvDkreHTvZ5k9" target="_blank"><button>Kirim Balasan 💬</button></a>`
+    ];
+
+    let current = 0;
+    function nextPage() {
+      const page = document.getElementById('page');
+      if (current < pages.length) {
+        page.innerHTML = pages[current] + '<br><button onclick="nextPage()">Lanjut ➡️</button>';
+        current++;
+      }
+    }
+  </script>
+</body>
+</html>
